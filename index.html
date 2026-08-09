@@ -159,7 +159,7 @@
 
     .title{
       margin:4px 0 4px;
-      color:var(--silver);
+      color:var(--purple) !important;
       font-size:1.05rem;
       font-weight:600;
     }
@@ -168,7 +168,7 @@
       display:inline-flex;
       align-items:center;
       gap:8px;
-      color:var(--gold-light);
+      color:var(--purple) !important;
       font-size:.92rem;
       margin-top:3px;
     }
@@ -346,12 +346,24 @@
       font-weight:700;
     }
 
+
+    .social{
+      background:linear-gradient(135deg,var(--gold-light),var(--gold)) !important;
+      border-color:transparent !important;
+      color:#72521d !important;
+    }
+    .social:hover{
+      transform:translateY(-2px);
+      border-color:rgba(198,161,91,.65) !important;
+    }
+
     .future{
       text-align:center;
       color:var(--muted);
       font-size:.82rem;
       padding:12px 6px 2px;
     }
+
     footer{
       text-align:center;
       color:#777d87;
@@ -370,9 +382,11 @@
       color:var(--text-green) !important;
     }
     .company-name,.section-title{color:var(--purple) !important}
-    .code,.future,.gallery-item figcaption{color:var(--text-silver) !important}
+    .code{color:var(--purple) !important}
+    .future,.gallery-item figcaption{color:var(--text-silver) !important}
     .btn.primary,.btn.gold{color:#72521d !important}
     .btn:not(.primary):not(.gold){color:var(--green) !important}
+    .social{color:#72521d !important}
     .card,.section,.hero,.contact-card,.address-card{
       background:rgba(238,238,242,.58) !important;
       border-color:rgba(83,68,104,.22) !important;
@@ -443,7 +457,6 @@
       <div class="title">مشاور بیمه و سرمایه‌گذاری</div>
       <div class="code">کد مشاور: ۱۹۳۱۰</div>
       <div class="gold-line"></div>
-
       <div class="hero-actions">
         <a class="btn primary" href="tel:+989131527153" aria-label="تماس با مصطفی دشتی">
           <span>📞</span> تماس
@@ -456,6 +469,7 @@
       </div>
     </div>
   </header>
+
   <main class="container">
 
     <section class="section">
@@ -491,18 +505,12 @@
     <section class="section">
       <h2 class="section-title">آدرس</h2>
 
-      <div class="company">
-        <img class="company-logo" src="logo.png" alt="لوگوی شرکت مشاوران بیمه مویرگ">
-        <div>
-          <div class="company-name">مشاوران بیمه مویرگ</div>
-        </div>
-      </div>
       <div class="info-list" style="margin-top:10px">
         <div class="info-row">
           <span class="info-icon">📍</span>
           <span>
             <span class="label">آدرس دفتر</span>
-            <span class="value address">یزد، بلوار شهیدقندی، کوچه ۲۶ شهیدقندی، پلاک ۵</span>
+            <span class="value address">یزد، صفائیه، بلوار شهیدقندی، کوچه ۲۶ شهیدقندی، پلاک ۵</span>
           </span>
         </div>
       </div>
@@ -517,6 +525,7 @@
            href="https://nshn.ir/7bXNzb_GA5-T">
           📍 مسیریابی با نشان
         </a>
+
         <a class="btn gold" target="_blank" rel="noopener"
            href="https://balad.ir/location?latitude=31.829014&amp;longitude=54.380455&amp;zoom=16.500000">
           📍 مسیریابی با بلد
@@ -531,7 +540,6 @@
 
     <section class="section">
       <h2 class="section-title">شبکه‌های اجتماعی</h2>
-
       <div class="social-grid">
         <a class="social" href="https://t.me/insurance_dashti" target="_blank" rel="noopener">
           <span class="social-icon telegram-icon" aria-hidden="true">
@@ -573,16 +581,16 @@
         <figure class="gallery-item">
           <img src="gallery-2.jpg" alt="معرفی گنجینه نقره">
         </figure>
-
         <figure class="gallery-item">
           <img src="gallery-1.jpg" alt="گالری تصویر اول">
         </figure>
       </div>
     </section>
+
   </main>
 
   <footer>
-    © مصطفی دشتی — کد مشاور ۱۹۳۱۰
+    © مصطفی دشتی — ۱۹۳۱۰
   </footer>
 
   <script>
@@ -597,7 +605,7 @@
         "TEL;TYPE=CELL:+989131527153",
         "EMAIL:m.dashti19310@gmail.com",
         "URL:https://mooyrag.com/",
-        "ADR;TYPE=WORK:;;یزد، بلوار شهیدقندی، کوچه ۲۶ شهیدقندی، پلاک ۵;;;;ایران",
+        "ADR;TYPE=WORK:;;یزد، صفائیه، بلوار شهیدقندی، کوچه ۲۶ شهیدقندی، پلاک ۵;;;;ایران",
         "NOTE:کد مشاور: 19310",
         "END:VCARD"
       ].join("\r\n");
