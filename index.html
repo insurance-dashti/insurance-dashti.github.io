@@ -144,6 +144,7 @@
       .gallery{grid-template-columns:1fr 1fr}
       .gallery-item:first-child{grid-column:1/-1}
     }
+
     .eyebrow{
       color:var(--gold-light);
       font-size:.82rem;
@@ -206,6 +207,12 @@
 
     .btn.primary{
       color:#15120b;
+      background:linear-gradient(135deg,var(--gold-light),var(--gold));
+      border-color:transparent;
+    }
+
+    .btn.gold{
+      color:#72521d !important;
       background:linear-gradient(135deg,var(--gold-light),var(--gold));
       border-color:transparent;
     }
@@ -290,6 +297,7 @@
     .address{
       line-height:1.8;
     }
+
     .map-buttons{
       display:grid;
       grid-template-columns:1fr;
@@ -438,6 +446,11 @@
     .bale-icon{color:#176b43}
     .eitaa-icon{color:#6d3f88}
 
+    /* حذف برچسب آدرس دفتر */
+    .address-label-hidden {
+      display: none !important;
+    }
+
   </style>
 </head>
 
@@ -457,12 +470,13 @@
       <div class="title">مشاور بیمه و سرمایه‌گذاری</div>
       <div class="code">کد مشاور: ۱۹۳۱۰</div>
       <div class="gold-line"></div>
+
       <div class="hero-actions">
-        <a class="btn primary" href="tel:+989131527153" aria-label="تماس با مصطفی دشتی">
+        <a class="btn gold" href="tel:+989131527153" aria-label="تماس با مصطفی دشتی">
           <span>📞</span> تماس
         </a>
 
-        <button class="btn primary" type="button" onclick="downloadVCard()" aria-label="ذخیره در مخاطبین">
+        <button class="btn gold" type="button" onclick="downloadVCard()" aria-label="ذخیره در مخاطبین">
           <span>➕</span> ذخیره در مخاطبین
         </button>
 
@@ -473,31 +487,25 @@
   <main class="container">
 
     <section class="section">
-      <h2 class="section-title">اطلاعات تماس</h2>
+      <h2 class="section-title">شبکه‌های اجتماعی</h2>
 
-      <div class="info-list">
-        <a class="info-row" href="tel:+989131527153">
-          <span class="info-icon">📱</span>
-          <span>
-            <span class="label">موبایل</span>
-            <span class="value" dir="ltr">0913 152 7153</span>
-          </span>
+      <div class="social-grid">
+        <a class="social" href="https://t.me/insurance_dashti" target="_blank" rel="noopener">
+          <span class="social-icon telegram-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21.4 3.7 3.2 10.8c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.6.3 1.8-.8l3.1-14.7c.3-1.3-.5-1.9-1.8-1.4ZM8.4 13.4l9.9-6.2c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.1-2-4.4Z"/></svg>
+          </span> کانال تلگرام
         </a>
 
-        <a class="info-row" href="mailto:m.dashti19310@gmail.com">
-          <span class="info-icon">✉️</span>
-          <span>
-            <span class="label">ایمیل</span>
-            <span class="value" dir="ltr">m.dashti19310@gmail.com</span>
-          </span>
+        <a class="social" href="https://ble.ir/insurance_dashti" target="_blank" rel="noopener">
+          <span class="social-icon bale-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2.3a9.7 9.7 0 1 0 0 19.4 9.7 9.7 0 0 0 0-19.4Zm5.5 6.2-2.4 7.4c-.2.6-.6.8-1.2.5l-3.2-2.3-1.6 1.5c-.2.2-.3.3-.6.3l.2-3.2 5.8-5.2c.3-.3-.1-.4-.5-.1l-7.1 4.5-3-.9c-.7-.2-.7-.7.1-1l11.7-4.5c.5-.2 1.9-.1 1.8.9Z"/></svg>
+          </span> کانال بله
         </a>
 
-        <a class="info-row" href="https://mooyrag.com/" target="_blank" rel="noopener">
-          <span class="info-icon">🌐</span>
-          <span>
-            <span class="label">وب‌سایت</span>
-            <span class="value" dir="ltr">mooyrag.com</span>
-          </span>
+        <a class="social" href="https://eitaa.com/insurance_dashti" target="_blank" rel="noopener">
+          <span class="social-icon eitaa-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2.5A9.5 9.5 0 1 0 12 21.5 9.5 9.5 0 0 0 12 2.5Zm4.7 6.1-2.2 7c-.2.7-.6 1-1.2.7l-2.9-2.1-1.4 1.4c-.2.2-.3.3-.6.3l.2-3 5.4-4.9c.3-.3-.1-.4-.5-.1l-6.6 4.2-2.8-.9c-.6-.2-.6-.7.1-.9l10.9-4.2c.5-.2 1.8-.1 1.6.5Z"/></svg>
+          </span> کانال ایتا
         </a>
       </div>
     </section>
@@ -509,6 +517,7 @@
         <div class="info-row">
           <span class="info-icon">📍</span>
           <span>
+            <span class="label address-label-hidden">آدرس دفتر</span>
             <span class="value address">یزد، صفائیه، بلوار شهیدقندی، کوچه ۲۶ شهیدقندی، پلاک ۵</span>
           </span>
         </div>
@@ -538,31 +547,6 @@
     </section>
 
     <section class="section">
-      <h2 class="section-title">شبکه‌های اجتماعی</h2>
-      <div class="social-grid">
-        <a class="social" href="https://t.me/insurance_dashti" target="_blank" rel="noopener">
-          <span class="social-icon telegram-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M21.4 3.7 3.2 10.8c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.6.3 1.8-.8l3.1-14.7c.3-1.3-.5-1.9-1.8-1.4ZM8.4 13.4l9.9-6.2c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.1-2-4.4Z"/></svg>
-          </span> کانال تلگرام
-        </a>
-
-        <a class="social" href="https://ble.ir/insurance_dashti" target="_blank" rel="noopener">
-          <span class="social-icon bale-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2.3a9.7 9.7 0 1 0 0 19.4 9.7 9.7 0 0 0 0-19.4Zm5.5 6.2-2.4 7.4c-.2.6-.6.8-1.2.5l-3.2-2.3-1.6 1.5c-.2.2-.3.3-.6.3l.2-3.2 5.8-5.2c.3-.3-.1-.4-.5-.1l-7.1 4.5-3-.9c-.7-.2-.7-.7.1-1l11.7-4.5c.5-.2 1.9-.1 1.8.9Z"/></svg>
-          </span> کانال بله
-        </a>
-
-        <a class="social" href="https://eitaa.com/insurance_dashti" target="_blank" rel="noopener">
-          <span class="social-icon eitaa-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2.5A9.5 9.5 0 1 0 12 21.5 9.5 9.5 0 0 0 12 2.5Zm4.7 6.1-2.2 7c-.2.7-.6 1-1.2.7l-2.9-2.1-1.4 1.4c-.2.2-.3.3-.6.3l.2-3 5.4-4.9c.3-.3-.1-.4-.5-.1l-6.6 4.2-2.8-.9c-.6-.2-.6-.7.1-.9l10.9-4.2c.5-.2 1.8-.1 1.6.5Z"/></svg>
-          </span> کانال ایتا
-        </a>
-      </div>
-
-      
-    </section>
-
-    <section class="section">
       <h2 class="section-title">درباره خدمات</h2>
       <p style="margin:0;color:var(--silver);font-size:.92rem">
         مشاوره بیمه و سرمایه‌گذاری با هدف ارائه راهکارهای متناسب با نیاز و شرایط شما.
@@ -580,6 +564,7 @@
         <figure class="gallery-item">
           <img src="gallery-2.jpg" alt="معرفی گنجینه نقره">
         </figure>
+
         <figure class="gallery-item">
           <img src="gallery-1.jpg" alt="گالری تصویر اول">
         </figure>
@@ -589,7 +574,7 @@
   </main>
 
   <footer>
-    © مصطفی دشتی — ۱۹۳۱۰
+    © مصطفی دشتی — کد مشاور ۱۹۳۱۰
   </footer>
 
   <script>
