@@ -144,6 +144,7 @@
       height:20px;
       flex:0 0 20px;
     }
+
     main{padding-bottom:42px}
 
     .section{
@@ -185,6 +186,7 @@
       padding:12px 0;
       border-bottom:1px solid rgba(255,255,255,.06);
     }
+
     .info-row:last-child{border-bottom:0;padding-bottom:0}
 
     .info-icon{
@@ -218,7 +220,7 @@
 
     .map-buttons{
       display:grid;
-      grid-template-columns:1fr;
+      grid-template-columns:1fr 1fr;
       gap:10px;
       margin-top:15px;
     }
@@ -247,6 +249,7 @@
       font-size:1rem;
       font-weight:800;
     }
+
     .company-caption{
       color:var(--muted);
       font-size:.78rem;
@@ -285,9 +288,9 @@
       padding:4px 0 28px;
     }
 
-    @media (min-width:620px){
-      .container{width:min(100% - 40px,760px)}
-      .map-buttons{grid-template-columns:1fr 1fr}
+    @media (max-width:619px){
+      .map-buttons{grid-template-columns:1fr}
+      .hero-actions{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -309,6 +312,7 @@
         <a class="btn primary" href="tel:+989131527153" aria-label="تماس با مصطفی دشتی">
           <span>📞</span> تماس
         </a>
+
         <button class="btn" type="button" onclick="downloadVCard()" aria-label="ذخیره در مخاطبین">
           <span>➕</span> ذخیره در مخاطبین
         </button>
@@ -375,13 +379,21 @@
 
       <div class="map-buttons">
         <a class="btn primary" target="_blank" rel="noopener"
-           href="https://www.google.com/maps/search/?api=1&query=%DB%8C%D8%B2%D8%AF%D8%8C%20%D8%A8%D9%84%D9%88%D8%A7%D8%B1%20%D8%B4%D9%87%DB%8C%D8%AF%D9%82%D9%86%D8%AF%DB%8C%D8%8C%20%DA%A9%D9%88%DA%86%D9%87%2026%20%D8%B4%D9%87%DB%8C%D8%AF%D9%82%D9%86%D8%AF%DB%8C%D8%8C%20%D9%BE%D9%84%D8%A7%DA%A9%205">
-          📍 مسیریابی با Google Maps
+           href="https://maps.app.goo.gl/vhzmpasqUkUkjka16?g_st=ac">
+          📍 گوگل مپ
         </a>
-      </div>
-
-      <div class="future">
-        لینک‌های Waze، نشان و بلد بعداً با لینک دقیق دفتر اضافه می‌شوند.
+        <a class="btn" target="_blank" rel="noopener"
+           href="https://nshn.ir/7bXNzb_GA5-T">
+          📍 نشان
+        </a>
+        <a class="btn" target="_blank" rel="noopener"
+           href="https://balad.ir/location?latitude=31.829014&longitude=54.380455&zoom=16.500000">
+          📍 بلد
+        </a>
+        <a class="btn" target="_blank" rel="noopener"
+           href="https://maps.me/link/ge0/8zLZkZcYwL/دفتر_بیمه">
+          📍 Maps.me
+        </a>
       </div>
     </section>
 
@@ -389,6 +401,9 @@
       <h2 class="section-title">ارتباط در شبکه‌ها</h2>
 
       <div class="social-grid">
+        <a class="social" href="https://t.me/insurance_dashti" target="_blank" rel="noopener">
+          <span>✈️</span> تلگرام
+        </a>
         <a class="social" href="https://ble.ir/insurance_dashti" target="_blank" rel="noopener">
           <span>🟦</span> کانال بله
         </a>
@@ -398,7 +413,7 @@
       </div>
 
       <div class="future">
-        لینک‌های اینستاگرام، تلگرام، واتساپ، فیسبوک، روبیکا و سایر شبکه‌ها بعداً اضافه می‌شوند.
+        لینک‌های اینستاگرام، واتساپ، فیسبوک، روبیکا و سایر شبکه‌ها بعداً اضافه می‌شوند.
       </div>
     </section>
 
@@ -412,6 +427,7 @@
     <div class="future">
       عکس پرسنلی، بنر، تیزر و گالری تصاویر در مرحله بعد به صفحه اضافه خواهند شد.
     </div>
+
   </main>
 
   <footer>
