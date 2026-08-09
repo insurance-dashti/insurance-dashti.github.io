@@ -55,7 +55,7 @@
     .logo-wrap{
       width:132px;
       height:132px;
-      margin:0 auto 18px;
+      margin:0 auto 14px;
       display:grid;
       place-items:center;
       background:#fff;
@@ -69,6 +69,54 @@
       width:88%;
       height:88%;
       object-fit:contain;
+    }
+
+    .profile-photo{
+      width:116px;
+      height:116px;
+      margin:0 auto 16px;
+      border-radius:50%;
+      object-fit:cover;
+      object-position:center;
+      display:block;
+      border:3px solid rgba(198,161,91,.72);
+      box-shadow:0 10px 30px rgba(0,0,0,.30);
+      background:#fff;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+
+    .gallery-item{
+      margin:0;
+      overflow:hidden;
+      border-radius:18px;
+      border:1px solid rgba(198,161,91,.18);
+      background:#0f1115;
+      box-shadow:0 10px 28px rgba(0,0,0,.20);
+    }
+
+    .gallery-item img{
+      display:block;
+      width:100%;
+      height:auto;
+      max-height:680px;
+      object-fit:cover;
+    }
+
+    .gallery-item figcaption{
+      padding:8px 12px;
+      color:var(--muted);
+      font-size:.78rem;
+      text-align:center;
+    }
+
+    @media (min-width:620px){
+      .gallery{grid-template-columns:1fr 1fr}
+      .gallery-item:first-child{grid-column:1/-1}
     }
 
     .eyebrow{
@@ -138,7 +186,6 @@
     }
 
     .btn.full{grid-column:1/-1}
-
     .icon{
       width:20px;
       height:20px;
@@ -220,7 +267,7 @@
 
     .map-buttons{
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns:1fr;
       gap:10px;
       margin-top:15px;
     }
@@ -288,9 +335,9 @@
       padding:4px 0 28px;
     }
 
-    @media (max-width:619px){
-      .map-buttons{grid-template-columns:1fr}
-      .hero-actions{grid-template-columns:1fr}
+    @media (min-width:620px){
+      .container{width:min(100% - 40px,760px)}
+      .map-buttons{grid-template-columns:1fr 1fr}
     }
   </style>
 </head>
@@ -302,7 +349,8 @@
         <img class="logo" src="logo.png" alt="لوگوی مشاوران بیمه مویرگ">
       </div>
 
-      <div class="eyebrow">کارت ویزیت دیجیتال</div>
+      <img class="profile-photo" src="profile.jpg" alt="عکس پرسنلی مصطفی دشتی">
+
       <h1>مصطفی دشتی</h1>
       <div class="title">مشاور بیمه و سرمایه‌گذاری</div>
       <div class="code">کد مشاور: ۱۹۳۱۰</div>
@@ -313,13 +361,10 @@
           <span>📞</span> تماس
         </a>
 
-        <button class="btn" type="button" onclick="downloadVCard()" aria-label="ذخیره در مخاطبین">
+        <button class="btn primary" type="button" onclick="downloadVCard()" aria-label="ذخیره در مخاطبین">
           <span>➕</span> ذخیره در مخاطبین
         </button>
 
-        <a class="btn full" href="https://mooyrag.com/" target="_blank" rel="noopener">
-          <span>🌐</span> وب‌سایت مشاوران بیمه مویرگ
-        </a>
       </div>
     </div>
   </header>
@@ -363,7 +408,6 @@
         <img class="company-logo" src="logo.png" alt="لوگوی شرکت مشاوران بیمه مویرگ">
         <div>
           <div class="company-name">مشاوران بیمه مویرگ</div>
-          <div class="company-caption">دفتر مشاوره بیمه و سرمایه‌گذاری</div>
         </div>
       </div>
 
@@ -380,19 +424,22 @@
       <div class="map-buttons">
         <a class="btn primary" target="_blank" rel="noopener"
            href="https://maps.app.goo.gl/vhzmpasqUkUkjka16?g_st=ac">
-          📍 گوگل مپ
+          📍 مسیریابی با Google Maps
         </a>
+
         <a class="btn" target="_blank" rel="noopener"
            href="https://nshn.ir/7bXNzb_GA5-T">
-          📍 نشان
+          📍 مسیریابی با نشان
         </a>
+
         <a class="btn" target="_blank" rel="noopener"
-           href="https://balad.ir/location?latitude=31.829014&longitude=54.380455&zoom=16.500000">
-          📍 بلد
+           href="https://balad.ir/location?latitude=31.829014&amp;longitude=54.380455&amp;zoom=16.500000">
+          📍 مسیریابی با بلد
         </a>
+
         <a class="btn" target="_blank" rel="noopener"
-           href="https://maps.me/link/ge0/8zLZkZcYwL/دفتر_بیمه">
-          📍 Maps.me
+           href="https://maps.me/link/ge0/8zLZkZcYwL/%D8%AF%D9%81%D8%AA%D8%B1_%D8%A8%DB%8C%D9%85%D9%87">
+          📍 مسیریابی با Maps.me
         </a>
       </div>
     </section>
@@ -402,11 +449,13 @@
 
       <div class="social-grid">
         <a class="social" href="https://t.me/insurance_dashti" target="_blank" rel="noopener">
-          <span>✈️</span> تلگرام
+          <span>✈️</span> کانال تلگرام
         </a>
+
         <a class="social" href="https://ble.ir/insurance_dashti" target="_blank" rel="noopener">
           <span>🟦</span> کانال بله
         </a>
+
         <a class="social" href="https://eitaa.com/insurance_dashti" target="_blank" rel="noopener">
           <span>🟩</span> کانال ایتا
         </a>
@@ -424,9 +473,23 @@
       </p>
     </section>
 
-    <div class="future">
-      عکس پرسنلی، بنر، تیزر و گالری تصاویر در مرحله بعد به صفحه اضافه خواهند شد.
-    </div>
+    <section class="section">
+      <h2 class="section-title">گالری محصولات و خدمات</h2>
+
+      <div class="gallery">
+        <figure class="gallery-item">
+          <img src="gallery-1.jpg" alt="معرفی بیمه مستمری کانتر">
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="gallery-2.jpg" alt="معرفی گنجینه نقره">
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="gallery-3.jpg" alt="معرفی گنجینه طلا">
+        </figure>
+      </div>
+    </section>
 
   </main>
 
