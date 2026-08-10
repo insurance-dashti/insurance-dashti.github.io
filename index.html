@@ -354,15 +354,15 @@
       font-weight:700;
     }
 
-
+    /* تمام دکمه‌های شبکه‌های اجتماعی سبز */
     .social{
-      background:linear-gradient(135deg,var(--gold-light),var(--gold)) !important;
+      background:linear-gradient(135deg,var(--green-light),var(--green)) !important;
       border-color:transparent !important;
-      color:#72521d !important;
+      color:#ffffff !important;
     }
     .social:hover{
       transform:translateY(-2px);
-      border-color:rgba(198,161,91,.65) !important;
+      border-color:rgba(23,107,67,.65) !important;
     }
 
     .future{
@@ -394,7 +394,7 @@
     .future,.gallery-item figcaption{color:var(--text-silver) !important}
     .btn.primary,.btn.gold{color:#72521d !important}
     .btn:not(.primary):not(.gold){color:var(--green) !important}
-    .social{color:#72521d !important}
+    .social{color:#ffffff !important}
     .card,.section,.hero,.contact-card,.address-card{
       background:rgba(238,238,242,.58) !important;
       border-color:rgba(83,68,104,.22) !important;
@@ -442,13 +442,31 @@
       fill:currentColor;
       display:block;
     }
-    .telegram-icon{color:#6d3f88}
-    .bale-icon{color:#176b43}
-    .eitaa-icon{color:#6d3f88}
+    /* رنگ آیکون‌ها سفید برای هماهنگی با دکمه سبز */
+    .telegram-icon,
+    .bale-icon,
+    .eitaa-icon {
+      color: #ffffff !important;
+    }
 
     /* حذف برچسب آدرس دفتر */
     .address-label-hidden {
       display: none !important;
+    }
+
+    /* استایل متن درباره ما */
+    .about-text {
+      color: var(--text-green);
+      font-size: .95rem;
+      line-height: 2.2;
+      margin: 0;
+      text-align: justify;
+    }
+    .about-text strong {
+      color: var(--purple);
+    }
+    .about-text .emoji {
+      display: inline-block;
     }
 
   </style>
@@ -486,7 +504,7 @@
 
   <main class="container">
 
-    <!-- بخش اطلاعات تماس (برگشت داده شد) -->
+    <!-- بخش اطلاعات تماس -->
     <section class="section">
       <h2 class="section-title">اطلاعات تماس</h2>
 
@@ -517,7 +535,7 @@
       </div>
     </section>
 
-    <!-- بخش شبکه‌های اجتماعی (جابجا شد به بالا) -->
+    <!-- بخش شبکه‌های اجتماعی (همه دکمه‌ها سبز با آیکون تلگرام) -->
     <section class="section">
       <h2 class="section-title">شبکه‌های اجتماعی</h2>
 
@@ -530,19 +548,19 @@
 
         <a class="social" href="https://ble.ir/insurance_dashti" target="_blank" rel="noopener">
           <span class="social-icon bale-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2.3a9.7 9.7 0 1 0 0 19.4 9.7 9.7 0 0 0 0-19.4Zm5.5 6.2-2.4 7.4c-.2.6-.6.8-1.2.5l-3.2-2.3-1.6 1.5c-.2.2-.3.3-.6.3l.2-3.2 5.8-5.2c.3-.3-.1-.4-.5-.1l-7.1 4.5-3-.9c-.7-.2-.7-.7.1-1l11.7-4.5c.5-.2 1.9-.1 1.8.9Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M21.4 3.7 3.2 10.8c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.6.3 1.8-.8l3.1-14.7c.3-1.3-.5-1.9-1.8-1.4ZM8.4 13.4l9.9-6.2c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.1-2-4.4Z"/></svg>
           </span> کانال بله
         </a>
 
         <a class="social" href="https://eitaa.com/insurance_dashti" target="_blank" rel="noopener">
           <span class="social-icon eitaa-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2.5A9.5 9.5 0 1 0 12 21.5 9.5 9.5 0 0 0 12 2.5Zm4.7 6.1-2.2 7c-.2.7-.6 1-1.2.7l-2.9-2.1-1.4 1.4c-.2.2-.3.3-.6.3l.2-3 5.4-4.9c.3-.3-.1-.4-.5-.1l-6.6 4.2-2.8-.9c-.6-.2-.6-.7.1-.9l10.9-4.2c.5-.2 1.8-.1 1.6.5Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M21.4 3.7 3.2 10.8c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.6.3 1.8-.8l3.1-14.7c.3-1.3-.5-1.9-1.8-1.4ZM8.4 13.4l9.9-6.2c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.1-2-4.4Z"/></svg>
           </span> کانال ایتا
         </a>
       </div>
     </section>
 
-    <!-- بخش آدرس (جابجا شد به پایین و برچسب آدرس دفتر حذف شد) -->
+    <!-- بخش آدرس (ترتیب جدید دکمه‌ها) -->
     <section class="section">
       <h2 class="section-title">آدرس</h2>
 
@@ -558,11 +576,6 @@
 
       <div class="map-buttons">
         <a class="btn gold" target="_blank" rel="noopener"
-           href="https://maps.app.goo.gl/vhzmpasqUkUkjka16?g_st=ac">
-          📍 مسیریابی با Google Maps
-        </a>
-
-        <a class="btn gold" target="_blank" rel="noopener"
            href="https://nshn.ir/7bXNzb_GA5-T">
           📍 مسیریابی با نشان
         </a>
@@ -576,14 +589,28 @@
            href="https://maps.me/link/ge0/8zLZkZcYwL/%D8%AF%D9%81%D8%AA%D8%B1_%D8%A8%DB%8C%D9%85%D9%87">
           📍 مسیریابی با Maps.me
         </a>
+
+        <a class="btn gold" target="_blank" rel="noopener"
+           href="https://maps.app.goo.gl/vhzmpasqUkUkjka16?g_st=ac">
+          📍 مسیریابی با Google Maps
+        </a>
       </div>
     </section>
 
+    <!-- بخش درباره ما (عنوان و متن جدید) -->
     <section class="section">
-      <h2 class="section-title">درباره خدمات</h2>
-      <p style="margin:0;color:var(--silver);font-size:.92rem">
-        مشاوره بیمه و سرمایه‌گذاری با هدف ارائه راهکارهای متناسب با نیاز و شرایط شما.
-      </p>
+      <h2 class="section-title">درباره ما</h2>
+      <div class="about-text">
+        <strong>✨ کارگزاری مویرگ؛ همراه مطمئن آینده مالی شما ✨</strong>
+        <br><br>
+        سازمان لوتوس به عنوان یکی از سازمان‌های برجسته و در حال رشد صنعت بیمه کشور، مفتخر است که در بستر کارگزاری معظم و برخط مویرگ، با شعبات فعال در شهرهای مختلف کشور، در کنار شما عزیزان حضور دارد 🌹
+        <br><br>
+        ما باور داریم اعتماد شما، بزرگ‌ترین سرمایه ماست؛
+        به همین دلیل تمام تلاش خود را به کار گرفته‌ایم تا با ارائه خدمات حرفه‌ای، محصولات به‌روز و راهکارهای کاربردی مالی و بیمه‌ای، تجربه‌ای مطمئن، متفاوت و ارزشمند برای شما عزیزان رقم بزنیم ✨
+        <br><br>
+        هدف ما فقط ارائه یک بیمه‌نامه نیست…
+        بلکه ساختن آرامش، امنیت مالی و همراهی بلندمدت با شما و خانواده‌های ارزشمندتان است 🤝
+      </div>
     </section>
 
     <section class="section">
