@@ -529,9 +529,10 @@
           <span>📞</span> تماس
         </a>
 
-        <button class="btn gold" type="button" onclick="downloadVCard()" aria-label="ذخیره در مخاطبین">
+        <!-- لینک مستقیم به فایل VCard آپلود شده در گیت‌هاب -->
+        <a class="btn gold" href="Mostafa-Dashti.vcf" download aria-label="ذخیره در مخاطبین">
           <span>➕</span> ذخیره در مخاطبین
-        </button>
+        </a>
 
       </div>
     </div>
@@ -672,70 +673,5 @@
     © مصطفی دشتی — ۱۹۳۱۰
   </footer>
 
-  <!-- توست نوتیفیکیشن -->
-  <div id="toast" class="toast">✅ فایل مخاطب با موفقیت دانلود شد!</div>
-
-  <script>
-    function downloadVCard(){
-      // اطلاعات کامل مخاطب
-      const firstName = "مصطفی";
-      const lastName = "دشتی";
-      const fullName = "مصطفی دشتی";
-      const org = "مشاوران بیمه مویرگ";
-      const title = "مشاور بیمه و سرمایه‌گذاری";
-      const phone = "+989131527153";
-      const email = "m.dashti19310@gmail.com";
-      const url = "https://mooyrag.com/";
-      const address = "یزد، صفائیه، بلوار شهیدقندی، کوچه ۲۶ شهیدقندی، پلاک ۵";
-      const note = "کد مشاور: 19310";
-
-      // ساخت فایل VCF با فرمت استاندارد
-      const vcard = [
-        "BEGIN:VCARD",
-        "VERSION:3.0",
-        "FN:" + fullName,
-        "N:" + lastName + ";" + firstName + ";;;",
-        "ORG:" + org,
-        "TITLE:" + title,
-        "TEL;TYPE=CELL,VOICE:" + phone,
-        "EMAIL:" + email,
-        "URL:" + url,
-        "ADR;TYPE=WORK:;;" + address + ";;;;ایران",
-        "NOTE:" + note,
-        "END:VCARD"
-      ].join("\r\n");
-
-      // ایجاد فایل با BOM برای پشتیبانی از یونیکد
-      const blob = new Blob(["\uFEFF" + vcard], { 
-        type: "text/vcard;charset=utf-8" 
-      });
-      
-      const urlObj = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = urlObj;
-      link.download = "Mostafa-Dashti.vcf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
-      // آزادسازی حافظه
-      setTimeout(() => {
-        URL.revokeObjectURL(urlObj);
-      }, 100);
-
-      // نمایش پیام موفقیت
-      showToast("✅ فایل مخاطب با موفقیت دانلود شد! پس از دانلود، فایل را باز کنید تا اطلاعات به دفترچه تلفن اضافه شود.");
-    }
-
-    // تابع نمایش نوتیفیکیشن
-    function showToast(message) {
-      const toast = document.getElementById('toast');
-      toast.textContent = message;
-      toast.className = 'toast show';
-      setTimeout(() => {
-        toast.className = 'toast';
-      }, 4000);
-    }
-  </script>
 </body>
 </html>
