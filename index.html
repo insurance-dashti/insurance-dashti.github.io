@@ -181,13 +181,6 @@
       background:linear-gradient(90deg,transparent,var(--gold),transparent);
     }
 
-    .hero-actions{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-      margin:22px 0 14px;
-    }
-
     .btn{
       min-height:54px;
       border-radius:16px;
@@ -206,12 +199,6 @@
 
     .btn:hover{transform:translateY(-2px);border-color:rgba(198,161,91,.65)}
 
-    .btn.primary{
-      color:#15120b;
-      background:linear-gradient(135deg,var(--gold-light),var(--gold));
-      border-color:transparent;
-    }
-
     .btn.gold{
       color:#72521d !important;
       background:linear-gradient(135deg,var(--gold-light),var(--gold));
@@ -219,12 +206,6 @@
     }
 
     .btn.full{grid-column:1/-1}
-
-    .icon{
-      width:20px;
-      height:20px;
-      flex:0 0 20px;
-    }
 
     main{padding-bottom:42px}
 
@@ -393,8 +374,7 @@
     .company-name,.section-title{color:var(--purple) !important}
     .code{color:var(--purple) !important}
     .future,.gallery-item figcaption{color:var(--text-silver) !important}
-    .btn.primary,.btn.gold{color:#72521d !important}
-    .btn:not(.primary):not(.gold){color:var(--green) !important}
+    .btn.gold{color:#72521d !important}
     .social{color:#ffffff !important}
     .card,.section,.hero,.contact-card,.address-card{
       background:rgba(238,238,242,.58) !important;
@@ -490,17 +470,6 @@
       <div class="code">کد مشاور: ۱۹۳۱۰</div>
       <div class="gold-line"></div>
 
-      <div class="hero-actions">
-        <a class="btn gold" href="tel:+989131527153" aria-label="تماس با مصطفی دشتی">
-          <span>📞</span> تماس
-        </a>
-
-        <!-- ✅ لینک صحیح با آدرس Raw شما -->
-        <a class="btn gold" href="https://github.com/insurance-dashti/insurance-dashti.github.io/raw/refs/heads/main/Mostafa-Dashti.vcf" download="Mostafa-Dashti.vcf" aria-label="ذخیره در مخاطبین">
-          <span>➕</span> ذخیره در مخاطبین
-        </a>
-
-      </div>
     </div>
   </header>
 
@@ -537,7 +506,7 @@
       </div>
     </section>
 
-    <!-- بخش شبکه‌های اجتماعی (همه دکمه‌ها سبز با آیکون تلگرام) -->
+    <!-- بخش شبکه‌های اجتماعی -->
     <section class="section">
       <h2 class="section-title">شبکه‌های اجتماعی</h2>
 
@@ -562,7 +531,7 @@
       </div>
     </section>
 
-    <!-- بخش آدرس (ترتیب جدید دکمه‌ها) -->
+    <!-- بخش آدرس (بدون دکمه گوگل مپ) -->
     <section class="section">
       <h2 class="section-title">آدرس</h2>
 
@@ -591,15 +560,10 @@
            href="https://maps.me/link/ge0/8zLZkZcYwL/%D8%AF%D9%81%D8%AA%D8%B1_%D8%A8%DB%8C%D9%85%D9%87">
           📍 مسیریابی با Maps.me
         </a>
-
-        <a class="btn gold" target="_blank" rel="noopener"
-           href="https://maps.app.goo.gl/vhzmpasqUkUkjka16?g_st=ac">
-          📍 مسیریابی با Google Maps
-        </a>
       </div>
     </section>
 
-    <!-- بخش درباره ما (عنوان و متن جدید) -->
+    <!-- بخش درباره ما -->
     <section class="section">
       <h2 class="section-title">درباره ما</h2>
       <div class="about-text">
