@@ -470,40 +470,6 @@
       display: inline-block;
     }
 
-    /* پیام نوتیفیکیشن */
-    .toast {
-      visibility: hidden;
-      min-width: 280px;
-      background: rgba(23, 107, 67, 0.95);
-      color: #fff;
-      text-align: center;
-      border-radius: 12px;
-      padding: 16px 20px;
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 9999;
-      font-size: .95rem;
-      font-weight: 600;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.15);
-      direction: rtl;
-    }
-    .toast.show {
-      visibility: visible;
-      animation: fadeInUp 0.5s, fadeOutDown 0.5s 3.5s;
-    }
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateX(-50%) translateY(30px);}
-      to {opacity: 1; transform: translateX(-50%) translateY(0);}
-    }
-    @keyframes fadeOutDown {
-      from {opacity: 1; transform: translateX(-50%) translateY(0);}
-      to {opacity: 0; transform: translateX(-50%) translateY(30px);}
-    }
-
   </style>
 </head>
 
@@ -529,8 +495,8 @@
           <span>📞</span> تماس
         </a>
 
-        <!-- لینک مستقیم به فایل VCard آپلود شده در گیت‌هاب -->
-        <a class="btn gold" href="Mostafa-Dashti.vcf" download aria-label="ذخیره در مخاطبین">
+        <!-- ✅ لینک صحیح با آدرس Raw شما -->
+        <a class="btn gold" href="https://github.com/insurance-dashti/insurance-dashti.github.io/raw/refs/heads/main/Mostafa-Dashti.vcf" download="Mostafa-Dashti.vcf" aria-label="ذخیره در مخاطبین">
           <span>➕</span> ذخیره در مخاطبین
         </a>
 
