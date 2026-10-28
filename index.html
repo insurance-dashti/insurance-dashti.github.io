@@ -112,8 +112,9 @@
 
     .gallery{
       display:grid;
-      grid-template-columns:1fr;
-      gap:14px;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:10px;
+      direction:rtl;
     }
 
     .gallery-item{
@@ -128,9 +129,13 @@
     .gallery-item img{
       display:block;
       width:100%;
-      height:auto;
-      max-height:680px;
+      height:clamp(100px, 28vw, 220px);
       object-fit:cover;
+    }
+
+    .gallery-item a{
+      display:block;
+      height:100%;
     }
 
     .gallery-item figcaption{
@@ -140,10 +145,7 @@
       text-align:center;
     }
 
-    @media (min-width:620px){
-      .gallery{grid-template-columns:1fr 1fr}
-      .gallery-item:first-child{grid-column:1/-1}
-    }
+
 
     .eyebrow{
       color:var(--gold-light);
@@ -587,6 +589,30 @@
       </div>
     </section>
 
+    <section class="section">
+      <h2 class="section-title">گالری</h2>
+
+      <div class="gallery">
+        <figure class="gallery-item">
+          <a href="https://mooyrag.com/products/life-insurance-based-on-gold" target="_blank" rel="noopener noreferrer">
+            <img src="gallery-3.png" alt="بیمه عمر مبتنی بر طلا">
+          </a>
+        </figure>
+
+        <figure class="gallery-item">
+          <a href="https://melico.ir/products/silver-life-insurance" target="_blank" rel="noopener noreferrer">
+            <img src="gallery-2.png" alt="بیمه عمر نقره">
+          </a>
+        </figure>
+
+        <figure class="gallery-item">
+          <a href="https://melico.ir/products/counter-insurance" target="_blank" rel="noopener noreferrer">
+            <img src="gallery-1.png" alt="بیمه کانتر">
+          </a>
+        </figure>
+      </div>
+    </section>
+
     <!-- بخش درباره ما -->
     <section class="section">
       <h2 class="section-title">درباره ما</h2>
@@ -600,24 +626,6 @@
         <br><br>
         هدف ما فقط ارائه یک بیمه‌نامه نیست…
         بلکه ساختن آرامش، امنیت مالی و همراهی بلندمدت با شما و خانواده‌های ارزشمندتان است 🤝
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">گالری</h2>
-
-      <div class="gallery">
-        <figure class="gallery-item">
-          <img src="gallery-3.jpg" alt="گالری تصویر سوم">
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="gallery-2.jpg" alt="معرفی گنجینه نقره">
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="gallery-1.jpg" alt="گالری تصویر اول">
-        </figure>
       </div>
     </section>
 
