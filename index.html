@@ -8,33 +8,37 @@
   <title>مصطفی دشتی | مشاور بیمه و سرمایه‌گذاری</title>
 
   <style>
-    :root{
-      --silver:#c8c8cc;
-      --silver-light:#e6e6ea;
-      --silver-dark:#8d8d96;
-      --green:#176b43;
-      --green-light:#23865a;
-      --purple:#6d3f88;
-      --purple-light:#8b5aa5;
-      --gold:#c99a3d;
-      --gold-light:#e2bd65;
-      --text-green:#185f3e;
-      --text-purple:#69417f;
-      --text-silver:#686872;
-      --muted:#666673;
-      --card:rgba(245,245,248,.56);
-      --border:rgba(90,78,110,.20);
+    :root {
+      --silver: #c8c8cc;
+      --silver-light: #e6e6ea;
+      --silver-dark: #8d8d96;
+      --green: #176b43;
+      --green-light: #23865a;
+      --purple: #6d3f88;
+      --purple-light: #8b5aa5;
+      --gold: #c99a3d;
+      --gold-light: #e2bd65;
+      --text-green: #185f3e;
+      --text-purple: #69417f;
+      --text-silver: #686872;
+      --muted: #666673;
+      --card: rgba(245,245,248,.56);
+      --border: rgba(90,78,110,.20);
     }
 
-    *{box-sizing:border-box}
+    * {
+      box-sizing: border-box;
+    }
 
-    html{scroll-behavior:smooth}
+    html {
+      scroll-behavior: smooth;
+    }
 
-    body{
-      margin:0;
-      min-height:100vh;
-      font-family:Tahoma, Arial, sans-serif;
-      color:var(--text-green);
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Tahoma, Arial, sans-serif;
+      color: var(--text-green);
       background:
         radial-gradient(circle at 12% 18%, rgba(255,255,255,.72) 0 1px, transparent 2px),
         radial-gradient(circle at 78% 13%, rgba(255,255,255,.55) 0 1px, transparent 2px),
@@ -42,421 +46,437 @@
         radial-gradient(circle at 21% 71%, rgba(255,255,255,.48) 0 1px, transparent 2px),
         radial-gradient(circle at 67% 82%, rgba(255,255,255,.58) 0 1px, transparent 2px),
         radial-gradient(circle at 42% 38%, rgba(255,255,255,.35) 0 1px, transparent 2px),
-        linear-gradient(135deg,#b5b5ba 0%,#e2e2e5 27%,#bdbdc3 51%,#ededf0 73%,#b2b2b8 100%);
-      background-attachment:fixed;
-      position:relative;
-      overflow-x:hidden;
+        linear-gradient(135deg, #b5b5ba 0%, #e2e2e5 27%, #bdbdc3 51%, #ededf0 73%, #b2b2b8 100%);
+      background-attachment: fixed;
+      position: relative;
+      overflow-x: hidden;
     }
-    body::before{
-      content:"";
-      position:fixed;
-      inset:-20%;
-      pointer-events:none;
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -20%;
+      pointer-events: none;
       background:
         radial-gradient(circle at 15% 20%, rgba(255,255,255,.22), transparent 13%),
         radial-gradient(circle at 82% 68%, rgba(255,255,255,.18), transparent 16%),
         radial-gradient(circle at 55% 8%, rgba(255,255,255,.14), transparent 12%);
-      animation:softShine 10s ease-in-out infinite alternate;
-    }
-    @keyframes softShine{
-      from{transform:translate3d(-1%, -1%,0);opacity:.72}
-      to{transform:translate3d(1%, 1%,0);opacity:1}
+      animation: softShine 10s ease-in-out infinite alternate;
     }
 
-    a{text-decoration:none;color:inherit}
+    @keyframes softShine {
+      from {
+        transform: translate3d(-1%, -1%, 0);
+        opacity: .72;
+      }
 
-    .container{
-      width:min(100% - 28px, 720px);
-      margin:auto;
+      to {
+        transform: translate3d(1%, 1%, 0);
+        opacity: 1;
+      }
     }
 
-    header{
-      padding:28px 0 14px;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    .brand{
-      text-align:center;
+    .container {
+      width: min(100% - 28px, 720px);
+      margin: auto;
     }
 
-    .logo-wrap{
-      width:132px;
-      height:132px;
-      margin:0 auto 14px;
-      display:grid;
-      place-items:center;
-      background:transparent;
-      border:0;
-      border-radius:0;
-      box-shadow:none;
-      overflow:visible;
+    header {
+      padding: 28px 0 14px;
     }
 
-    .logo{
-      width:88%;
-      height:88%;
-      object-fit:contain;
+    .brand {
+      text-align: center;
     }
 
-    .profile-photo{
-      width:116px;
-      height:116px;
-      margin:0 auto 16px;
-      border-radius:50%;
-      object-fit:cover;
-      object-position:center;
-      display:block;
-      border:3px solid rgba(198,161,91,.72);
-      box-shadow:0 10px 30px rgba(0,0,0,.30);
-      background:#fff;
+    /* لوگو بدون کادر و پس‌زمینه */
+    .logo-wrap {
+      width: 132px;
+      height: 132px;
+      margin: 0 auto 14px;
+      display: grid;
+      place-items: center;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      overflow: visible;
     }
 
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
-      gap:10px;
-      direction:rtl;
+    .logo {
+      width: 88%;
+      height: 88%;
+      object-fit: contain;
+      background: transparent;
     }
 
-    .gallery-item{
-      margin:0;
-      overflow:hidden;
-      border-radius:18px;
-      border:0;
-      background:transparent;
-      box-shadow:none;
+    .profile-photo {
+      width: 116px;
+      height: 116px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      border: 3px solid rgba(198,161,91,.72);
+      box-shadow: 0 10px 30px rgba(0,0,0,.30);
+      background: #fff;
     }
 
-    .gallery-item img{
-      display:block;
-      width:100%;
-      height:clamp(100px, 28vw, 220px);
-      object-fit:contain;
-      background:transparent;
+    /* گالری طرح‌های بیمه */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      direction: rtl;
     }
 
-    .gallery-item a{
-      display:block;
-      height:100%;
+    .gallery-item {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
     }
 
-    .gallery-item figcaption{
-      padding:0 4px 10px;
-      color:var(--muted);
-      font-size:.95rem;
-      font-weight:800;
-      text-align:center;
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: clamp(100px, 28vw, 220px);
+      object-fit: contain;
+      background: transparent;
     }
 
-    .gallery-item figcaption a{
-      display:block;
-      padding:10px 4px 8px;
-      color:var(--text-green) !important;
-      text-decoration:none;
+    .gallery-item > a {
+      display: block;
+      height: 100%;
     }
 
-    .gallery-item figcaption a:hover{
-      color:var(--gold) !important;
-      text-decoration:underline;
+    .gallery-item figcaption {
+      padding: 0 4px 10px;
+      color: var(--text-silver);
+      font-size: .95rem;
+      font-weight: 800;
+      text-align: center;
     }
 
-
-
-    .eyebrow{
-      color:var(--gold-light);
-      font-size:.82rem;
-      letter-spacing:.08em;
-      margin-bottom:4px;
+    .gallery-item figcaption a {
+      display: block;
+      padding: 10px 4px 8px;
+      color: var(--text-green) !important;
+      text-decoration: none;
     }
 
-    h1{
-      margin:0;
-      font-size:clamp(1.8rem,7vw,2.55rem);
-      font-weight:800;
+    .gallery-item figcaption a:hover {
+      color: var(--gold) !important;
+      text-decoration: underline;
     }
 
-    .title{
-      margin:4px 0 4px;
-      color:var(--purple) !important;
-      font-size:1.05rem;
-      font-weight:600;
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: .82rem;
+      letter-spacing: .08em;
+      margin-bottom: 4px;
     }
 
-    .code{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      color:var(--purple) !important;
-      font-size:.92rem;
-      margin-top:3px;
+    h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 7vw, 2.55rem);
+      font-weight: 800;
     }
 
-    .gold-line{
-      width:74px;
-      height:2px;
-      margin:16px auto 0;
-      background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    .title {
+      margin: 4px 0;
+      color: var(--purple) !important;
+      font-size: 1.05rem;
+      font-weight: 600;
     }
 
-    .btn{
-      min-height:54px;
-      border-radius:16px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:9px;
-      padding:10px 14px;
-      font-weight:700;
-      font-size:.94rem;
-      border:1px solid var(--line);
-      background:linear-gradient(145
-deg,#1c1f25,#13151a);
-      transition:.2s ease;
-      cursor:pointer;
+    .code {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--purple) !important;
+      font-size: .92rem;
+      margin-top: 3px;
     }
 
-    .btn:hover{transform:translateY(-2px);border-color:rgba(198,161,91,.65)}
-
-    .btn.gold{
-      color:#72521d !important;
-      background:linear-gradient(135deg,var(--gold-light),var(--gold));
-      border-color:transparent;
+    .gold-line {
+      width: 74px;
+      height: 2px;
+      margin: 16px auto 0;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
 
-    .btn.full{grid-column:1/-1}
-
-    main{padding-bottom:42px}
-
-    .section{
-      margin-top:16px;
-      background:linear-gradient(145deg,rgba(29,32,38,.96),rgba(19,21,26,.96));
-      border:1px solid rgba(255,255,255,.055);
-      border-radius:var(--radius);
-      padding:21px;
-      box-shadow:var(--shadow);
+    .btn {
+      min-height: 54px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 10px 14px;
+      font-weight: 700;
+      font-size: .94rem;
+      border: 1px solid var(--border);
+      background: linear-gradient(145deg, #1c1f25, #13151a);
+      transition: .2s ease;
+      cursor: pointer;
     }
 
-    .section-title{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      margin:0 0 16px;
-      font-size:1.05rem;
-      color:var(--gold-light);
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(198,161,91,.65);
     }
 
-    .section-title::before{
-      content:"";
-      width:4px;
-      height:24px;
-      border-radius:4px;
-      background:var(--gold);
+    .btn.gold {
+      color: #72521d !important;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      border-color: transparent;
     }
 
-    .info-list{
-      display:grid;
-      gap:11px;
+    .btn.full {
+      grid-column: 1 / -1;
     }
 
-    .info-row{
-      display:grid;
-      grid-template-columns:38px 1fr;
-      align-items:start;
-      gap:10px;
-      padding:12px 0;
-      border-bottom:1px solid rgba(255,255,255,.06);
+    main {
+      padding-bottom: 42px;
     }
 
-    .info-row:last-child{border-bottom:0;padding-bottom:0}
-
-    .info-icon{
-      width:38px;
-      height:38px;
-      border-radius:12px;
-      display:grid;
-      place-items:center;
-      color:var(--gold-light);
-      background:rgba(198,161,91,.10);
-      border:1px solid rgba(198,161,91,.16);
+    /* تمام بخش‌ها بدون کادر و پس‌زمینه سفید */
+    .section {
+      margin-top: 16px;
+      padding: 21px 0;
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
     }
 
-    .label{
-      display:block;
-      color:var(--muted);
-      font-size:.76rem;
-      margin-bottom:1px;
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      font-size: 1.05rem;
+      color: var(--purple) !important;
     }
 
-    .value{
-      display:block;
-      font-size:.94rem;
-      font-weight:600;
-      word-break:break-word;
+    .section-title::before {
+      content: "";
+      width: 4px;
+      height: 24px;
+      border-radius: 4px;
+      background: var(--gold);
     }
 
-    .address{
-      line-height:1.8;
+    .info-list {
+      display: grid;
+      gap: 11px;
     }
 
-    .map-buttons{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:10px;
-      margin-top:15px;
+    .info-row {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      align-items: start;
+      gap: 10px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(83,68,104,.15);
     }
 
-    .company{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      padding:14px;
-      border:1px solid rgba(198,161,91,.18);
-      border-radius:18px;
-      background:rgba(198,161,91,.045);
+    .info-row:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
     }
 
-    .company-logo{
-      width:60px;
-      height:60px;
-      border-radius:15px;
-      background:#fff;
-      padding:7px;
-      object-fit:contain;
-      flex:0 0 60px;
+    .info-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: var(--gold-light);
+      background: rgba(198,161,91,.10);
+      border: 1px solid rgba(198,161,91,.16);
     }
 
-    .company-name{
-      font-size:1rem;
-      font-weight:800;
+    .label {
+      display: block;
+      color: var(--muted);
+      font-size: .76rem;
+      margin-bottom: 1px;
     }
 
-    .company-caption{
-      color:var(--muted);
-      font-size:.78rem;
+    .value {
+      display: block;
+      font-size: .94rem;
+      font-weight: 600;
+      word-break: break-word;
     }
 
-    .social-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
+    /* نمایش شماره موبایل از چپ به راست */
+    .phone-number {
+      direction: ltr;
+      unicode-bidi: embed;
+      text-align: left;
+      display: block;
     }
 
-    .social{
-      min-height:52px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:9px;
-      border-radius:15px;
-      border:1px solid rgba(255,255,255,.07);
-      background:#14161b;
-      font-size:.9rem;
-      font-weight:700;
+    .address {
+      line-height: 1.8;
     }
 
-    /* تمام دکمه‌های شبکه‌های اجتماعی سبز */
-    .social{
-      background:linear-gradient(135deg,var(--green-light),var(--green)) !important;
-      border-color:transparent !important;
-      color:#ffffff !important;
-    }
-    .social:hover{
-      transform:translateY(-2px);
-      border-color:rgba(23,107,67,.65) !important;
+    .map-buttons {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 15px;
     }
 
-    .future{
-      text-align:center;
-      color:var(--muted);
-      font-size:.82rem;
-      padding:12px 6px 2px;
+    .company {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px;
+      border: 1px solid rgba(198,161,91,.18);
+      border-radius: 18px;
+      background: rgba(198,161,91,.045);
     }
 
-    footer{
-      text-align:center;
-      color:#777d87;
-      font-size:.72rem;
-      padding:4px 0 28px;
+    .company-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
+      background: #fff;
+      padding: 7px;
+      object-fit: contain;
+      flex: 0 0 60px;
     }
 
-    @media (min-width:620px){
-      .container{width:min(100% - 40px,760px)}
-      .map-buttons{grid-template-columns:1fr 1fr}
-    }
-  
-    h1,h2,h3,p,.eyebrow,.company-name,.company-caption,.future,.section-title,
-    .contact-item,.contact-item a,.social,.btn,.footer,.address,.address-text,
-    .profile-name,.profile-title,.code,.map-buttons,.gallery-item figcaption{
-      color:var(--text-green) !important;
-    }
-    .company-name,.section-title{color:var(--purple) !important}
-    .code{color:var(--purple) !important}
-    .future,.gallery-item figcaption{color:var(--text-silver) !important}
-    .btn.gold{color:#72521d !important}
-    .social{color:#ffffff !important}
-    .card,.section,.hero,.contact-card,.address-card{
-      background:rgba(238,238,242,.58) !important;
-      border-color:rgba(83,68,104,.22) !important;
-      backdrop-filter:blur(8px);
+    .company-name {
+      font-size: 1rem;
+      font-weight: 800;
     }
 
-  
-    .brand-row{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      margin:0 auto 18px;
-      direction:ltr;
-    }
-    .brand-company{
-      flex:1;
-      text-align:left;
-      direction:rtl;
-      font-size:1.35rem;
-      font-weight:800;
-      color:var(--green) !important;
-      letter-spacing:-.4px;
-    }
-    .brand-row .logo-wrap{
-      flex:0 0 92px;
-      width:92px;
-      height:92px;
-      margin:0;
-      order:2;
+    .company-caption {
+      color: var(--muted);
+      font-size: .78rem;
     }
 
-  
-    .social-icon{
-      width:25px;
-      height:25px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      flex:0 0 25px;
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
     }
-    .social-icon svg{
-      width:100%;
-      height:100%;
-      fill:currentColor;
-      display:block;
+
+    .social {
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 15px;
+      border: 1px solid transparent;
+      background: linear-gradient(135deg, var(--green-light), var(--green)) !important;
+      color: #fff !important;
+      font-size: .9rem;
+      font-weight: 700;
+      transition: .2s ease;
     }
-    /* رنگ آیکون‌ها سفید برای هماهنگی با دکمه 
-سبز */
+
+    .social:hover {
+      transform: translateY(-2px);
+      border-color: rgba(23,107,67,.65) !important;
+    }
+
+    .future {
+      text-align: center;
+      color: var(--muted);
+      font-size: .82rem;
+      padding: 12px 6px 2px;
+    }
+
+    footer {
+      text-align: center;
+      color: #686872;
+      font-size: .72rem;
+      padding: 4px 0 28px;
+    }
+
+    @media (min-width: 620px) {
+      .container {
+        width: min(100% - 40px, 760px);
+      }
+
+      .map-buttons {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin: 0 auto 18px;
+      direction: ltr;
+    }
+
+    .brand-company {
+      flex: 1;
+      text-align: left;
+      direction: rtl;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--green) !important;
+      letter-spacing: -.4px;
+    }
+
+    .brand-row .logo-wrap {
+      flex: 0 0 92px;
+      width: 92px;
+      height: 92px;
+      margin: 0;
+      order: 2;
+    }
+
+    .social-icon {
+      width: 25px;
+      height: 25px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 25px;
+    }
+
+    .social-icon svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+      display: block;
+    }
+
+    /* رنگ آیکون‌ها سفید برای هماهنگی با دکمه سبز */
     .telegram-icon,
     .bale-icon,
     .eitaa-icon,
     .rubika-icon,
     .instagram-icon,
     .whatsapp-icon {
-      color: #ffffff !important;
+      color: #fff !important;
     }
 
-    /* حذف برچسب آدرس دفتر */
     .address-label-hidden {
       display: none !important;
     }
 
-    /* استایل متن درباره ما */
     .about-text {
       color: var(--text-green);
       font-size: .95rem;
@@ -464,13 +484,14 @@ deg,#1c1f25,#13151a);
       margin: 0;
       text-align: justify;
     }
+
     .about-text strong {
       color: var(--purple);
     }
+
     .about-text .emoji {
       display: inline-block;
     }
-
   </style>
 </head>
 
@@ -490,7 +511,6 @@ deg,#1c1f25,#13151a);
       <div class="title">مشاور بیمه و سرمایه‌گذاری</div>
       <div class="code">کد مشاور: ۱۹۳۱۰</div>
       <div class="gold-line"></div>
-
     </div>
   </header>
 
@@ -502,11 +522,10 @@ deg,#1c1f25,#13151a);
 
       <div class="info-list">
         <a class="info-row" href="tel:+989131527153">
-          <span class="info-icon">📱</
-span>
+          <span class="info-icon">📱</span>
           <span>
             <span class="label">موبایل</span>
-            <span class="value" dir="ltr">0913 152 7153</span>
+            <span class="value phone-number">0913 152 7153</span>
           </span>
         </a>
 
@@ -514,8 +533,7 @@ span>
           <span class="info-icon">✉️</span>
           <span>
             <span class="label">ایمیل</span>
-            <span class="value" dir=
-"ltr">m.dashti19310@gmail.com</span>
+            <span class="value" dir="ltr">m.dashti19310@gmail.com</span>
           </span>
         </a>
 
@@ -529,61 +547,56 @@ span>
       </div>
     </section>
 
-    <!-- بخش شبکه‌های اجتماعی با ترتیب جدید: بله، تلگرام، ایتا، واتساپ، روبیکا، اینستاگرام -->
+    <!-- بخش شبکه‌های اجتماعی -->
     <section class="section">
       <h2 class="section-title">شبکه‌های اجتماعی</h2>
 
       <div class="social-grid">
-        <!-- ردیف اول: بله و تلگرام -->
         <a class="social" href="https://ble.ir/insurance_dashti" target="_blank" rel="noopener">
           <span class="social-icon bale-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M21.4 3.7 3.2 
-10.8c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.6.3 1.8-.8l3.1-14.7c.3-1.3-.5-1.9-1.8-1.4ZM8.4 13.4l9.9-6.2c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.1-2-4.4Z"/></svg>
-          </span> کانال بله
+            <svg viewBox="0 0 24 24"><path d="M21.4 3.7 3.2 10.8c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.6.3 1.8-.8l3.1-14.7c.3-1.3-.5-1.9-1.8-1.4ZM8.4 13.4l9.9-6.2c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.1-2-4.4Z"/></svg>
+          </span>
+          کانال بله
         </a>
 
         <a class="social" href="https://t.me/insurance_dashti" target="_blank" rel="noopener">
           <span class="social-icon telegram-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M21.4 3.7 3.2 10.8c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 
-4.8 3.5c.9.5 1.6.3 1.8-.8l3.1-14.7c.3-1.3-.5-1.9-1.8-1.4ZM8.4 13.4l9.9-6.2c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.1-2-4.4Z"/></svg>
-          </span> کانال تلگرام
+            <svg viewBox="0 0 24 24"><path d="M21.4 3.7 3.2 10.8c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.6.3 1.8-.8l3.1-14.7c.3-1.3-.5-1.9-1.8-1.4ZM8.4 13.4l9.9-6.2c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.1-2-4.4Z"/></svg>
+          </span>
+          کانال تلگرام
         </a>
 
-        <!-- ردیف دوم: ایتا و واتساپ -->
         <a class="social" href="https://eitaa.com/insurance_dashti" target="_blank" rel="noopener">
           <span class="social-icon eitaa-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M21.4 3.7 3.2 10.8c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.6.3 1.8-.8l3.1-14
-.7c.3-1.3-.5-1.9-1.8-1.4ZM8.4 13.4l9.9-6.2c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.1-2-4.4Z"/></svg>
-          </span> کانال ایتا
+            <svg viewBox="0 0 24 24"><path d="M21.4 3.7 3.2 10.8c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.6.3 1.8-.8l3.1-14.7c.3-1.3-.5-1.9-1.8-1.4ZM8.4 13.4l9.9-6.2c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.1-2-4.4Z"/></svg>
+          </span>
+          کانال ایتا
         </a>
 
         <a class="social" href="https://whatsapp.com/channel/0029Vb8Wjpa1yT2H8ZX0gy1U" target="_blank" rel="noopener">
           <span class="social-icon whatsapp-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.7
-88-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 
-9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </span> کانال واتساپ
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </span>
+          کانال واتساپ
         </a>
 
-        <!-- ردیف سوم: روبیکا و اینستاگرام -->
         <a class="social" href="https://rubika.ir/page/insurance_dashti" target="_blank" rel="noopener">
-          <span class="social-icon 
-rubika-icon" aria-hidden="true">
+          <span class="social-icon rubika-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v6l5.25 3.15L17 12.23l-4-2.37V7z"/></svg>
-          </span> کانال روبیکا
+          </span>
+          کانال روبیکا
         </a>
 
         <a class="social" href="https://www.instagram.com/insurance_dashti?igsh=NjY2dmxza3ljc3V5&igsi=NjY2dmxza3ljc3V5" target="_blank" rel="noopener">
-          <span class="social-icon instagram-icon" 
-aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 
-23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          </span> پیج اینستاگرام
+          <span class="social-icon instagram-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </span>
+          پیج اینستاگرام
         </a>
       </div>
     </section>
 
-    <!-- بخش آدرس (بدون دکمه گوگل مپ) -->
+    <!-- بخش آدرس -->
     <section class="section">
       <h2 class="section-title">آدرس</h2>
 
@@ -615,6 +628,7 @@ aria-hidden="true">
       </div>
     </section>
 
+    <!-- بخش طرح‌های بیمه -->
     <section class="section">
       <h2 class="section-title">طرح‌های بیمه</h2>
 
@@ -630,8 +644,7 @@ aria-hidden="true">
 
         <figure class="gallery-item">
           <figcaption>
-            <a href="https://melico.ir
-/products/silver-life-insurance" target="_blank" rel="noopener noreferrer">نقره</a>
+            <a href="https://melico.ir/products/silver-life-insurance" target="_blank" rel="noopener noreferrer">نقره</a>
           </figcaption>
           <a href="https://melico.ir/products/silver-life-insurance" target="_blank" rel="noopener noreferrer" aria-label="مشاهده طرح بیمه نقره">
             <img src="gallery-2.png" alt="طرح بیمه نقره">
@@ -640,8 +653,7 @@ aria-hidden="true">
 
         <figure class="gallery-item">
           <figcaption>
-            <a href="https://mooyrag.com/products/life-insurance
--based-on-gold" target="_blank" rel="noopener noreferrer">طلا</a>
+            <a href="https://mooyrag.com/products/life-insurance-based-on-gold" target="_blank" rel="noopener noreferrer">طلا</a>
           </figcaption>
           <a href="https://mooyrag.com/products/life-insurance-based-on-gold" target="_blank" rel="noopener noreferrer" aria-label="مشاهده طرح بیمه طلا">
             <img src="gallery-3.png" alt="طرح بیمه طلا">
@@ -652,17 +664,19 @@ aria-hidden="true">
 
     <!-- بخش درباره ما -->
     <section class="section">
-      <h2 class="section-title">درباره 
-ما</h2>
+      <h2 class="section-title">درباره ما</h2>
+
       <div class="about-text">
         <strong>✨ کارگزاری مویرگ؛ همراه مطمئن آینده مالی شما ✨</strong>
         <br><br>
+
         سازمان لوتوس به عنوان یکی از سازمان‌های برجسته و در حال رشد صنعت بیمه کشور، مفتخر است که در بستر کارگزاری معظم و برخط مویرگ، با شعبات فعال در شهرهای مختلف کشور، در کنار شما عزیزان حضور دارد 🌹
         <br><br>
+
         ما باور داریم اعتماد شما، بزرگ‌ترین سرمایه ماست؛
-        به همین دلیل تمام تلاش خود را به کار گرفته‌ایم تا با ارائه خدمات حرفه‌ای، محصولات به‌روز و راهکارهای کاربردی مالی و بیمه‌ای، تجربه‌ای مطمئن، متفاوت و ارزشمند برای شما 
-عزیزان رقم بزنیم ✨
+        به همین دلیل تمام تلاش خود را به کار گرفته‌ایم تا با ارائه خدمات حرفه‌ای، محصولات به‌روز و راهکارهای کاربردی مالی و بیمه‌ای، تجربه‌ای مطمئن، متفاوت و ارزشمند برای شما عزیزان رقم بزنیم ✨
         <br><br>
+
         هدف ما فقط ارائه یک بیمه‌نامه نیست…
         بلکه ساختن آرامش، امنیت مالی و همراهی بلندمدت با شما و خانواده‌های ارزشمندتان است 🤝
       </div>
