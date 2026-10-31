@@ -129,7 +129,7 @@ transparent 2px),
       background: #fff;
     }
 
-    /* گالری طرح‌های بیمه */
+    /* گالری طرح‌های سرمایه‌گذاری */
     .gallery {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -323,9 +323,10 @@ transparent 2px),
     }
 
     /* نمایش شماره موبایل از چپ به راست */
-    .phone-number {
+    .phone-number,
+    .email-address {
       direction: ltr;
-      unicode-bidi: embed;
+      unicode-bidi: isolate;
       text-align: left;
       display: block;
     }
@@ -509,7 +510,8 @@ transparent 2px),
       <img class="profile-photo" src="profile.jpg" alt="عکس پرسنلی مصطفی دشتی">
 
       <h1>مصطفی دشتی</h1>
-      <div class="title">مشاور بیمه و سرمایه‌گذاری</div>
+      <div class="title">مشاور بیمه و 
+سرمایه‌گذاری</div>
       <div class="code">کد مشاور: ۱۹۳۱۰</div>
       <div class="gold-line"></div>
     </div>
@@ -524,8 +526,8 @@ transparent 2px),
       <div class="gallery">
         <figure class="gallery-item">
           <figcaption>
-            <a href="https://mooyrag.com/products/life-insurance
--based-on-gold" target="_blank" rel="noopener noreferrer">طلا</a>
+            <a href="https://mooyrag
+.com/products/life-insurance-based-on-gold" target="_blank" rel="noopener noreferrer">طلا</a>
           </figcaption>
           <a href="https://mooyrag.com/products/life-insurance-based-on-gold" target="_blank" rel="noopener noreferrer" aria-label="مشاهده طرح بیمه طلا">
             <img src="gallery-3.png" alt="طرح بیمه طلا">
@@ -534,8 +536,8 @@ transparent 2px),
 
         <figure class="gallery-item">
           <figcaption>
-            <a href="https://melico.ir/products/silver-life-insurance" target="_blank" rel="noopener 
-noreferrer">نقره</a>
+            <a href="https://melico.ir/products/silver-life-insurance" 
+target="_blank" rel="noopener noreferrer">نقره</a>
           </figcaption>
           <a href="https://melico.ir/products/silver-life-insurance" target="_blank" rel="noopener noreferrer" aria-label="مشاهده طرح بیمه نقره">
             <img src="gallery-2.png" alt="طرح بیمه نقره">
@@ -544,7 +546,8 @@ noreferrer">نقره</a>
 
         <figure class="gallery-item">
           <figcaption>
-            <a href="https://melico.ir/products/counter-insurance" target="_blank" rel="noopener noreferrer">کانتر</a>
+            <a href="https://melico.ir/products/counter-insurance" target="_blank" rel="noopener 
+noreferrer">کانتر</a>
           </figcaption>
           <a href="https://melico.ir/products/counter-insurance" target="_blank" rel="noopener noreferrer" aria-label="مشاهده طرح بیمه کانتر">
             <img src="gallery-1.png" alt="طرح بیمه کانتر">
@@ -567,19 +570,19 @@ noreferrer">نقره</a>
         </a>
 
         <a class="info-row" href="mailto:m.dashti19310@gmail.com">
-          <span class="info-icon">✉️</
-span>
+          <span class="info-icon">✉️</span>
           <span>
             <span class="label">ایمیل</span>
-            <span class="value phone-number" dir="ltr">m.dashti19310@gmail.com</span>
+            <bdi class="value email-address" dir="ltr">m.dashti19310@gmail.com</bdi>
           </span>
         </a>
 
         <a class="info-row" href="https://mooyrag.com/" target="_blank" rel="noopener">
           <span class="info-icon">🌐</span>
           <span>
-            <span class="label">وب‌سایت</span>
-            <span class="value phone-number" dir="ltr">mooyrag.com</span>
+            <span class="label">وب‌سایت</
+span>
+            <span class="value" dir="ltr">mooyrag.com</span>
           </span>
         </a>
       </div>
